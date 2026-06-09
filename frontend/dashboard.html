@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Face Recognition Dashboard</title>
+
+    <link rel="stylesheet" href="/frontend/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h2>FaceAuth</h2>
+
+            <ul>
+
+                <li class="active"><a href="/frontend/dashboard.html"><i
+                            class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+                <li><a href="/frontend/register.html"><i class="fa-solid fa-user-plus"></i>Registration</a></li>
+                <li><a href="/frontend/take-attendance.html"><i class="fa-solid fa-list-check"></i>Take Attendance</a>
+                </li>
+                <li><a href="/frontend/student.html"><i class="fa-solid fa-user-graduate"></i>Students</a></li>
+                <li><a href="/frontend/daliy-attendance.html"><i class="fa-solid fa-calendar-check"></i>Attendance</a>
+                </li>
+                <li><a href="/frontend/report.html"><i class="fa-solid fa-chart-line"></i>Reports</li></a>
+                <!-- <li><i class="fa-solid fa-gear"></i>Settings</li> -->
+
+            </ul>
+            <li class="logout">
+                <a href="#" onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+           
+    
+    </div>
+
+
+        <!-- MAIN CONTENT -->
+
+        <div class="main-content">
+
+            <!-- TOPBAR -->
+
+            <div class="topbar">
+
+                <h1>Admin Dashboard</h1>
+
+            </div>
+
+
+            <!-- DASHBOARD CARDS -->
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3><i class="fa-solid fa-users"></i>Total Students</h3>
+
+                    <p id="totalStudents">0</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3><i class="fa-solid fa-user-check"></i>Present Today</h3>
+
+                    <p id="presentStudents">0</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3><i class="fa-solid fa-user-xmark"></i>Absent Today</h3>
+
+                    <p id="absentStudents">0</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CAMERA SECTION -->
+
+            <div class="graph-container">
+
+                <div class="graph-card">
+                    <h3>Daily Attendance</h3>
+                    <canvas id="dailyChart"></canvas>
+                </div>
+
+                <div class="graph-card">
+                    <h3>Monthly Attendance</h3>
+                    <canvas id="monthlyChart"></canvas>
+                </div>
+
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+            <script src="/frontend/static/logout.js"></script>
+            <script src="/frontend/static/auth.js"></script>
+            <script src="/frontend/static/dashboard.js"></script>
+
+
+</body>
+
+</html>

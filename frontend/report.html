@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+
+    <link rel="stylesheet" href="/frontend/report.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+
+        <div class="sidebar">
+
+            <h2>FaceAuth</h2>
+
+            <ul>
+                <li><a href="/frontend/dashboard.html"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+                <li><a href="/frontend/register.html"><i class="fa-solid fa-user-plus"></i>Registration</a></li>
+                <li><a href="/frontend/take-attendance.html"><i class="fa-solid fa-list-check"></i>Take Attendance</a>
+                </li>
+                <li><a href="/frontend/student.html"><i class="fa-solid fa-user-graduate"></i>Students</a></li>
+                <li><a href="/frontend/daliy-attendance.html"><i class="fa-solid fa-calendar-check"></i>Attendance</a>
+                </li>
+                <li class="active"><a href="/frontend/report.html"><i class="fa-solid fa-file-lines"></i>Reports</a>
+                </li>
+            </ul>
+                <!-- <li>
+                <a href="#" onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li> -->
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="table-section">
+
+            <h2>Attendance Reports</h2>
+
+            <div class="report-buttons">
+
+                <button onclick="loadDailyReport()">
+                    Daily Report
+                </button>
+
+                <button onclick="loadMonthlyReport()">
+                    Monthly Report
+                </button>
+                <button onclick="exportExcel()">
+                    <i class="fa-solid fa-file-excel"></i>
+                    Export Excel
+                </button>
+
+            </div>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>User ID</th>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="reportTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+    <script src="/frontend/static/logout.js"></script>
+    <script src="/frontend/static/report.js"></script>
+
+</body>
+
+</html>

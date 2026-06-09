@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0b1220,#111827,#1e293b);
+}
+
+.login-box{
+    width:420px;
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.4);
+}
+
+.login-box h1{
+    color:#ffffff;
+    margin-bottom:15px;
+    font-size:32px;
+}
+
+.login-box p{
+    color:#cbd5e1;
+    font-size:14px;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+#loginForm{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+#loginForm input{
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#1f2937;
+    color:white;
+    font-size:15px;
+    transition:0.3s;
+}
+
+#loginForm input:focus{
+    border:1px solid #3b82f6;
+    box-shadow:0 0 10px rgba(59,130,246,0.4);
+}
+
+#loginForm input::placeholder{
+    color:#94a3b8;
+}
+
+#loginForm button{
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#loginForm button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.login-box::before{
+    content:"🔒";
+    display:block;
+    font-size:45px;
+    margin-bottom:15px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Face Recognition Dashboard</title>
+
+    <link rel="stylesheet" href="/frontend/daliy-attendance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+     <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h2>FaceAuth</h2>
+
+            <ul>
+
+                <li><a href="/frontend/dashboard.html"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+                <li><a href="/frontend/register.html"><i class="fa-solid fa-user-plus"></i>Registration</a></li>
+                <li><a href="/frontend/take-attendance.html"><i class="fa-solid fa-list-check"></i>Take Attendance</a></li>
+                <li><a href="/frontend/student.html"><i class="fa-solid fa-user-graduate"></i>Students</a></li>
+                <li class="active"><a href="/frontend/daliy-attendance.html"><i class="fa-solid fa-calendar-check"></i>Attendance</a></li>
+                <li><a href="/frontend/report.html"><i class="fa-solid fa-chart-line"></i>Reports</li></a>
+                <!-- <li><i class="fa-solid fa-chart-line"></i>Reports</li>
+                <li><i class="fa-solid fa-gear"></i>Settings</li> -->
+
+            </ul>
+            <!-- Logout Button -->
+            <!-- <li>
+                <a href="#" onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li> -->
+        </div>
+    
+<!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="report-section">
+
+            <h2>Daily Attendance Report</h2>
+
+<div class="table-container"></div>
+<table>
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody id="dailyTable"></tbody>
+</table>
+
+<!-- <br><br>
+
+<h2>Monthly Attendance Report</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody id="monthlyTable"></tbody>
+</table> -->
+<script src="/frontend/static/logout.js"></script>
+<script src="/frontend/static/daliy-report.js"></script>
+</body>
+
+</html>

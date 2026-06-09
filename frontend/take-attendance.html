@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Face Recognition Dashboard</title>
+
+    <link rel="stylesheet" href="/frontend/take-attendance.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h2>FaceAuth</h2>
+
+            <ul>
+
+                <li><a href="/frontend/dashboard.html"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+                <li><a href="/frontend/register.html"><i class="fa-solid fa-user-plus"></i>Registration</a></li>
+                <li class="active"><a href="/frontend/take-attendance.html"><i class="fa-solid fa-list-check"></i>Take
+                        Attendance</a></li>
+                <li><a href="/frontend/student.html"><i class="fa-solid fa-user-graduate"></i>Students</a></li>
+                <li><a href="/frontend/daliy-attendance.html"><i class="fa-solid fa-calendar-check"></i>Attendance</a>
+                </li>
+                <li><a href="/frontend/report.html"><i class="fa-solid fa-chart-line"></i>Reports</a></li>
+                <!-- <li><i class="fa-solid fa-chart-line"></i>Reports</li>
+                <li><i class="fa-solid fa-gear"></i>Settings</li> -->
+
+            </ul>
+            <!-- Logout Button -->
+            <!-- <li>
+                <a href="#" onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li> -->
+        </div>
+
+
+        <!-- CAMERA SECTION -->
+
+        <div class="camera-section">
+
+            <div class="camera-box">
+
+                <h2>Live Face Scanner</h2>
+
+                <video id="video" autoplay playsinline></video>
+                 <!-- <canvas id="canvas"></canvas> -->
+
+                <div class="student-info">
+
+                    
+                </div>
+
+                <canvas id="canvas"></canvas>
+
+                <button onclick="markAttendance()">
+                    Mark Attendance
+                </button>
+
+                <!-- <p id="message"></p> -->
+
+            </div>
+
+        </div>
+
+        <div id="toast" class="toast">
+
+            <div class="toast-icon">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <!-- <div class="toast-content">
+                <h4>Success!</h4>
+                <p id="toastText">Attendance marked successfully.</p>
+            </div> -->
+
+        </div>
+
+        <!-- <span class="toast-close" onclick="closeToast()">
+        <i class="fa-solid fa-xmark"></i>
+    </span> -->
+        <script src="/frontend/static/logout.js"></script>
+        <script src="/frontend/static/auth.js"></script>
+        <script src="/frontend/static/take-attendance.js"></script>
+</body>
+
+</html>

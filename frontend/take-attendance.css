@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* BASE */
+body{
+    background: linear-gradient(135deg,#0b1220,#111827,#0f172a);
+    color:#e5e7eb;
+    font-size:14px;
+    overflow:hidden;
+}
+
+/* LAYOUT */
+.dashboard{
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+     width:240px;
+    background: rgba(17,24,39,0.92);
+    backdrop-filter: blur(18px);
+    padding: 22px 16px;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    height: 100vh;
+    top: 0;
+    position: sticky;
+}
+
+.sidebar h2{
+    font-size:22px;
+    margin-bottom:26px;
+    color:#60a5fa;
+    font-weight:700;
+    letter-spacing:0.5px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:11px 12px;
+    margin-bottom:10px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.2s ease;
+    font-size:13px;
+    font-weight:500;
+    color:#cbd5e1;
+}
+
+.sidebar ul li:hover{
+    background: rgba(59,130,246,0.12);
+    transform: translateX(3px);
+}
+
+.sidebar ul li.active{
+    background: linear-gradient(135deg,#3b82f6,#2563eb);
+    color:white;
+    box-shadow:0 8px 18px rgba(37,99,235,0.25);
+}
+.sidebar ul li a{
+    text-decoration: none;
+    color: #cbd5e1;
+    display: block;
+}
+
+.sidebar ul li.active a{
+    color: white;
+}
+/* icon */
+.sidebar ul li i{
+    margin-right: 10px;
+    width: 18px;
+}
+/* Logout Item */
+.logout{
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.logout a{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px;
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: #cbd5e1;   /* White/Grey */
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+}
+
+.logout a:hover{
+    background: rgba(239,68,68,0.12);
+    color: #ef4444;
+}
+
+.logout i{
+    width: 18px;
+}
+
+
+
+/* CAMERA SECTION */
+.camera-section{
+    margin-left:240px;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.camera-box{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    background:none;
+    border:none;
+    box-shadow:none;
+    padding:0;
+}
+
+.camera-box h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+#video{
+    width:420px;
+    height:300px;
+
+    border-radius:15px;
+    border:2px solid #3b82f6;
+
+    object-fit:cover;
+    background:black;
+
+    display:block;
+    margin-bottom:12px;
+}
+
+.camera-box button{
+    width:220px;
+    padding:12px 20px;
+
+    border:none;
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#3b82f6,#2563eb);
+    color:white;
+    font-size:14px;
+    font-weight:600;
+    cursor:pointer;
+
+    margin-top:0;
+}
+
+#canvas{
+    display:none;
+}
+.toast{
+    position: fixed;
+    top: 20px;
+    right: -400px;
+
+    width: 320px;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: #ffffff;
+    border-left: 5px solid #22c55e;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+    transition: all 0.4s ease;
+    z-index: 9999;
+}
+
+.toast.show{
+    right: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.toast-icon{
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background: #22c55e;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 18px;
+}
+
+.toast-content h4{
+    margin: 0;
+    color: #16a34a;
+    font-size: 18px;
+}
+
+.toast-content p{
+    margin: 4px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Student Registration</title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/register.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+     <div class="dashboard">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h2>FaceAuth</h2>
+
+            <ul>
+
+                <li><a href="/frontend/dashboard.html"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+                <li class="active"><a href="/frontend/register.html"><i class="fa-solid fa-user-plus"></i>Registration</a></li>
+                <li><a href="/frontend/take-attendance.html"><i class="fa-solid fa-list-check"></i>Take Attendance</a></li>
+                <li><a href="/frontend/student.html"><i class="fa-solid fa-user-graduate"></i>Students</a></li>
+                <li><a href="/frontend/daliy-attendance.html"><i class="fa-solid fa-calendar-check"></i>Attendance</a></li>
+                <li><a href="/frontend/report.html"><i class="fa-solid fa-chart-line"></i>Reports</li></a>
+                <!-- <li><i class="fa-solid fa-chart-line"></i>Reports</li>
+                <li><i class="fa-solid fa-gear"></i>Settings</li> -->
+
+            </ul>
+            <!-- Logout Button -->
+            <!-- <li class="logout">
+                <a href="#" onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li> -->
+        </div>
+
+
+   <div class="register-card">
+
+    <div class="card-header">
+        <h1>
+            <i class="fa-solid fa-user-plus"></i>
+            Student Registration
+        </h1>
+
+        <span id="currentDate"></span>
+    </div>
+
+    <div class="form-grid">
+
+        <div class="input-group">
+            <label>Student Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Student Name"
+            >
+        </div>
+
+        <div class="input-group">
+            <label>Student ID</label>
+            <input
+                type="text"
+                id="userid"
+                placeholder="Enter Student ID"
+            >
+        </div>
+
+        <div class="input-group">
+            <label>Registration Date</label>
+            <input
+                type="text"
+                id="date"
+                readonly
+            >
+        </div>
+
+    </div>
+
+    <div class="camera-box">
+        <video
+            id="video"
+            autoplay
+            playsinline
+            muted
+        ></video>
+
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <button id="registerBtn" type="button">
+        <i class="fa-solid fa-camera"></i>
+        Register Face
+    </button>
+
+    <p id="message"></p>
+
+</div>
+<!-- Toast Notification -->
+<!-- <div id="toast" class="toast">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastText">Student Registered Successfully</span>
+</div> -->
+<script src="/frontend/static/logout.js"></script>
+<script src="/frontend/static/auth.js"></script>
+<script src="/frontend/static/register.js"></script>
+</body>
+
+</html>
